@@ -17,7 +17,7 @@ fi
 
 # Run Docker Compose
 echo "Starting Docker Compose..."
-docker compose -p "$DOCKER_COMPOSE_PROJECT_NAME" -f "$DOCKER_COMPOSE_FILE" up -d --build --remove-orphans
+docker compose --project-name "$DOCKER_COMPOSE_PROJECT_NAME" -f "$DOCKER_COMPOSE_FILE" up -d --build --remove-orphans
 
 # Check if Docker Compose ran successfully
 if [ $? -ne 0 ]; then
