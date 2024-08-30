@@ -1,6 +1,4 @@
-version: '3.8'
 services:
-
   # API service
   api:
     image: registry.veblika.com/veblika_api:latest
