@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+
+  # API service
+  api:
+    image: registry.veblika.com/veblika_api:latest
+    restart: always
+    networks:
+      - dokploy-network
+    env_file:
+      - .env
+    ports:
+      - "${API_PORT:-8013}:8013" # Maps dynamic or default host port 8013 to container port 8013
+
+networks:
+  dokploy-network:
+    external: true
